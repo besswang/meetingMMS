@@ -1,0 +1,47 @@
+{
+  "calledNumber": "测试内容283i",
+  "companyId": 50786,
+  "createTime": 67720,
+  "endTime": 23432,
+  "fixPhone": "测试内容sk52",
+  "isAuto": 60470,
+  "meetTitle": "测试内容c7t8",
+  "members": [
+    {
+      "fixName": "王建武",
+      "isHost": 1,
+      "memberId": 62871,
+      "phone": "15057187177",
+      "phoneId": 20306,
+      "recordId": 40288,
+      "speaked": 0,
+      "status": 1
+    },
+    {
+      "fixName": "王立娟",
+      "isHost": 0,
+      "memberId": 62872,
+      "phone": "15057187176",
+      "phoneId": 20306,
+      "recordId": 40288,
+      "speaked": 1,
+      "status": 2
+    },
+    {
+      "fixName": "海绵宝宝",
+      "isHost": 0,
+      "memberId": 62873,
+      "phone": "15057187167",
+      "phoneId": 20306,
+      "recordId": 40288,
+      "speaked": 0,
+      "status": 3
+    }
+  ],
+  "natNumber": "测试内容2f55",
+  "recordId": 51222,
+  "recordType": 17125,
+  "roomNumber": "测试内容6vf7",
+  "startTime": 46741,
+  "status": 18784
+}
