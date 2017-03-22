@@ -1,0 +1,135 @@
+{
+  "status": "200",
+  "code": "",
+  "msg": "",
+  "data": {
+    "departId": 68120,
+    "departName": "业务部",
+    "orderNo": 2,
+    "status": 1,
+    "departLevel": 1,
+    "departParent": 0,
+    "departPath": "/0",
+    "createTime": 1457094375000,
+    "updateTime": 1480065850000,
+    "companyId": 2446,
+    "phoneCount": 0,
+    "childDeparts": [],
+    "parentDeparts": [
+      {
+        "departId": 68120,
+        "departName": "业务部",
+        "orderNo": 2,
+        "status": 1,
+        "departLevel": 1,
+        "departParent": 0,
+        "departPath": "/0",
+        "createTime": 1457094375000,
+        "updateTime": 1480065850000,
+        "companyId": 2446,
+        "phoneCount": 0,
+        "childDeparts": [],
+        "parentDeparts": [],
+        "departPhones": []
+      }
+    ],
+    "departPhones": [
+      {
+        "id": 1352908,
+        "companyId": 2446,
+        "fixPhone": "13952089911",
+        "orderNo": 0,
+        "phoneName": "高峥嵘",
+        "pinyin": "gaozhengrong ",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": ""
+      },
+      {
+        "id": 1203270,
+        "companyId": 2446,
+        "fixPhone": "18602956699",
+        "orderNo": 0,
+        "phoneName": "魏华明",
+        "pinyin": "weihuaming？",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": "18767173160,18767173161,18767173162"
+      },
+      {
+        "id": 1203271,
+        "companyId": 2446,
+        "fixPhone": "15057187176",
+        "orderNo": 0,
+        "phoneName": "胡文杰",
+        "pinyin": "xuwenjie？",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": ""
+      },
+      {
+        "id": 1204775,
+        "companyId": 2446,
+        "fixPhone": "18668407878",
+        "orderNo": -1,
+        "phoneName": "徐永杰",
+        "pinyin": "xuyongjie？",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": ""
+      },
+      {
+        "id": 1206865,
+        "companyId": 2446,
+        "fixPhone": "13893600043",
+        "orderNo": 0,
+        "phoneName": "倪海",
+        "pinyin": "nihai？",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": ""
+      },
+      {
+        "id": 1250141,
+        "companyId": 2446,
+        "fixPhone": "13385817511",
+        "orderNo": 5,
+        "phoneName": "baobao1",
+        "pinyin": "baobao1？",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": ""
+      },
+      {
+        "id": 1250146,
+        "companyId": 2446,
+        "fixPhone": "13385817513",
+        "orderNo": 6,
+        "phoneName": "baobao3",
+        "pinyin": "baobao3？",
+        "departId": 68120,
+        "departName": "业务部",
+        "status": 1,
+        "expand": ""
+      },
+      {
+        "id": 1352823,
+        "companyId": 2446,
+        "fixPhone": "13758230573",
+        "orderNo": 0,
+        "phoneName": "沈俊",
+        "pinyin": "chen shen ",
+        "departId": 68120,
+        "departName": "技术",
+        "status": 1,
+        "expand": "12345678977"
+      }
+    ]
+  }
+}
