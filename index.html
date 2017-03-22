@@ -27,6 +27,182 @@
 	<script type="text/javascript" src="../js/bootstrap.js"></script>
 </head>
 <body>
-4455
+<div class="header">
+	<span class="pull-left head-title"></span>
+	<div class="pull-right">
+		<!--<span class="show-icon" style="display:none;"></span>&lt;!&ndash;背景图&ndash;&gt;-->
+		<span class="show-icon master" style="background-color: rgb(120, 145, 157);"></span>
+		<i class="exit-icon"></i>
+		<a class="exit" href="#">退出</a>
+	</div>
+</div>
+<section class="page2">
+	<ul class="tab-menu pull-left" id="tab-menu">
+		<li class="active" url=""><i class="i1"></i>电话会议</li>
+		<li><i class="i2"></i>通讯录</li>
+		<li><i class="i3"></i>账号设置</li>
+	</ul>
+	<div class="pull-right right-search">
+		<span class="search-icon"></span>
+		<input type="text" class="form-control search-text" placeholder="搜索账号名或电话号码">
+	</div>
+</section>
+<section class="con" id="container"></section>
 </body>
 </html>
+<script type="text/javascript">
+	var companyId,companyName,fixPhone,phoneName;//公司ID,公司名称，登录号码,固话的名称(用户人名)
+	//登陆后请求数据
+	$.ajax({
+		url:"login.json",
+		type: "POST",
+		dataType :"json",
+		data:{
+			fixPhone:"18767173166",
+			password:"123456"
+		},
+		success	:function(data){
+			console.log(data.data.companyName);
+			companyId = data.data.companyId;
+			companyName = data.data.companyName;
+			fixPhone = data.data.fixPhone;
+			phoneName = data.data.phoneName;
+			$(".head-title").text(companyName);//公司
+			$(".master").text(phoneName.slice(-2));//用户名
+		}
+	});
+	//文件地址,一个函数
+	function ajax(url, fnSucc, fnFaild)
+	{
+		//1.创建Ajax对象
+		var oAjax=null;
+
+		if(window.XMLHttpRequest)
+		{
+			oAjax=new XMLHttpRequest();
+		}
+		else
+		{
+			oAjax=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		//2.连接服务器
+		oAjax.open('GET', url, true);
+
+		//3.发送请求
+		oAjax.send();
+
+		//4.接收服务器的返回
+		oAjax.onreadystatechange=function ()
+		{
+			if(oAjax.readyState==4)	//完成
+			{
+				if(oAjax.status==200)	//成功
+				{
+					fnSucc(oAjax.responseText);
+				}
+				else
+				{
+					if(fnFaild)
+						fnFaild(oAjax.status);
+				}
+			}
+		};
+	}
+	ajax('1.html',function (str) {
+		oContainer.innerHTML = str;
+	});
+	var oUl = document.getElementById("tab-menu");
+	var oLi = oUl.getElementsByTagName("li");
+	var oContainer = document.getElementById("container");
+	var i=0;
+	for(i=0;i<oLi.length;i++){
+		oLi[i].index = i;
+		oLi[i].onclick = function () {
+			ajax(this.index+1+'.html?t='+new Date().getTime(),function (str) {
+				oContainer.innerHTML = str;
+			});
+			for(i=0;i<oLi.length;i++){
+				oLi[i].className = '';
+			}
+			this.className = "active"
+		}
+	}
+	//获取可视区域高度
+	bodyH = document.documentElement.clientHeight;
+	var conH = document.getElementById("container");
+	conH.style.height = (bodyH-173)+"px";
+
+</script>
+<script type="text/javascript" src="../js/toastr.js"></script>
+<script type="text/javascript" src="../js/bt-datetimepicker/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../js/bt-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#datatime').datetimepicker({
+			language: 'zh-CN',
+			format:'yyyy-mm-dd HH:mm',//选择完日期后，input框里的时间值的格式
+			startDate:new Date(),//开始日期时间，在此之前的都不可选，同理也有endDate
+			weekStart: 1,
+			todayBtn:  1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			forceParse: 0,
+			showMeridian: 1,
+			pickerPosition:"top-left"
+		});
+	});
+
+</script>
+<!--菊花加载-->
+<script type="text/javascript" src="../js/loading/spin.js"></script>
+<!--列表查询-->
+<script src="../js/list/list.js"></script>
+<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js" />-->
+<script src="../js/list/pagination.js"></script>
+<!--滚动加载封装-->
+<!--<script type="text/javascript">-->
+	<!--$(function () {-->
+		<!--function successFn() {-->
+			    <!--$.each(data.data.dtos, function (i,item) {//循环获取数据-->
+			 	  <!--var html =-->
+			 	 	  <!--'<li style="opacity:0;-moz-opacity: 0;filter: alpha(opacity=0);">'+-->
+			 	 	  <!--'<div class="three-icon">';-->
+			 	   <!--$.each(item.members,function (i,v) {-->
+			 	 	  <!--html+=-->
+			 	 		  <!--'<span class="small-icon">'+v.fixName.slice(-2)+'</span>';-->
+			 	   <!--});-->
+			 	   <!--html +=-->
+			 	 	  <!--'</div>'+-->
+			 	 	  <!--'<div class="right-cont">'+-->
+			 	 	  <!--'<p>'+-->
+			 	 	  <!--'<span class="content">'+item.meetTitle+'</span>'+-->
+			 	 	  <!--'<span class="time">'+item.startTime+'</span>'+-->
+			 	 	  <!--'<a class="reservation" data-recordType='+item.recordType+' href="#"></a>'+-->
+			 	 	  <!--'</p>'+-->
+			 	 	  <!--'</div>'+-->
+			 	 	  <!--'</li>';-->
+			 	  <!--$(obj).append(html);-->
+			   <!--// });-->
+			 <!--var objectsRendered = $(obj).children('[rel!=loaded]');-->
+
+			 <!--if (opts.afterLoad != null){-->
+			 	<!--opts.afterLoad(objectsRendered);-->
+			 <!--}-->
+		<!--})-->
+	<!--}-->
+	<!--})-->
+<!--</script>-->
+<!--<script src="../js/scrollpagination.js"></script>-->
+<!--自定义-->
+<script type="text/javascript" src="../js/my.js"></script>
+<script type="text/javascript">
+	$.fn.fadeInWithDelay = function(){
+		var delay = 0;
+		return this.each(function(){
+			$(this).delay(delay).animate({opacity:1}, 200);
+			delay += 100;
+		});
+	};
+</script>
