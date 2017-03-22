@@ -1,0 +1,138 @@
+{
+  "status": "200",
+  "code": "",
+  "msg": "",
+  "data": {
+    "departId": 0,
+    "departName": "",
+    "orderNo": 0,
+    "status": 0,
+    "departLevel": 0,
+    "departParent": 0,
+    "departPath": "",
+    "createTime": 0,
+    "updateTime": 0,
+    "companyId": 0,
+    "phoneCount": 0,
+    "childDeparts": [
+      {
+        "departId": 72109,
+        "departName": "电话会议测试",
+        "orderNo": 0,
+        "status": 0,
+        "departLevel": 1,
+        "departParent": 0,
+        "departPath": "",
+        "createTime": 0,
+        "updateTime": 0,
+        "companyId": 0,
+        "phoneCount": 10,
+        "childDeparts": [],
+        "parentDeparts": [],
+        "departPhones": []
+      },
+      {
+        "departId": 68120,
+        "departName": "业务部",
+        "orderNo": 2,
+        "status": 0,
+        "departLevel": 1,
+        "departParent": 0,
+        "departPath": "",
+        "createTime": 0,
+        "updateTime": 0,
+        "companyId": 0,
+        "phoneCount": 8,
+        "childDeparts": [],
+        "parentDeparts": [],
+        "departPhones": []
+      },
+      {
+        "departId": 63435,
+        "departName": "技术部",
+        "orderNo": 3,
+        "status": 0,
+        "departLevel": 1,
+        "departParent": 0,
+        "departPath": "",
+        "createTime": 0,
+        "updateTime": 0,
+        "companyId": 0,
+        "phoneCount": 8,
+        "childDeparts": [],
+        "parentDeparts": [],
+        "departPhones": []
+      },
+      {
+        "departId": 68122,
+        "departName": "后勤部",
+        "orderNo": 5,
+        "status": 0,
+        "departLevel": 1,
+        "departParent": 0,
+        "departPath": "",
+        "createTime": 0,
+        "updateTime": 0,
+        "companyId": 0,
+        "phoneCount": 2,
+        "childDeparts": [],
+        "parentDeparts": [],
+        "departPhones": []
+      },
+      {
+        "departId": 65123,
+        "departName": "测试部",
+        "orderNo": 10,
+        "status": 0,
+        "departLevel": 1,
+        "departParent": 0,
+        "departPath": "",
+        "createTime": 0,
+        "updateTime": 0,
+        "companyId": 0,
+        "phoneCount": 2,
+        "childDeparts": [],
+        "parentDeparts": [],
+        "departPhones": []
+      }
+    ],
+    "parentDeparts": [],
+    "departPhones": [
+      {
+        "id": 1352823,
+        "companyId": 2446,
+        "fixPhone": "13758230033",
+        "orderNo": 0,
+        "phoneName": "小二上茶",
+        "pinyin": "chen shen ",
+        "departId": 0,
+        "departName": "",
+        "status": 1,
+        "expand": "12345678971"
+      },{
+        "id": 1352824,
+        "companyId": 2446,
+        "fixPhone": "13758237045",
+        "orderNo": 0,
+        "phoneName": "甲壳虫",
+        "pinyin": "chen shen ",
+        "departId": 0,
+        "departName": "",
+        "status": 1,
+        "expand": "12345678972"
+      },{
+        "id": 1352824,
+        "companyId": 2446,
+        "fixPhone": "13758232178",
+        "orderNo": 0,
+        "phoneName": "甲虫",
+        "pinyin": "chen shen ",
+        "departId": 0,
+        "departName": "",
+        "status": 1,
+        "expand": "12345678972"
+      }
+
+    ]
+  }
+}
