@@ -1,0 +1,655 @@
+.profile-card {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    position: absolute;
+    left: -334px;
+    top: 0;
+    width: 334px;
+    height: 300px;
+    /*transform: translateX(-50%)translateY(-50%);*/
+    box-shadow: rgba(0,0,0,0.15) 0 0 6px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.circle{
+    background: url("../img/loading.gif") no-repeat;
+    width: 32px;
+    height: 32px;
+}
+.profile-card .header{
+    height: 110px;
+    border-bottom: 1px solid #ede9e5;
+    background-color: #33bfc4;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+    overflow: visible;
+}
+.profile-card .header:after{
+    content:"";
+    width: 14px;
+    height: 14px;
+    background-color: #35bfc4;
+    transform:rotate(135deg);
+    position: absolute;
+    top: 28px;
+    left: -8px;
+}
+.profile-card .header .wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 90px;
+    margin-left: -50px;
+    margin-top: -45px;
+}
+.profile-card .header .wrap .avatar-wrap{
+    width: 58px;
+    height: 58px;
+    line-height:58px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    border-radius: 58px;
+    margin:0 auto;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.profile-card .header .wrap .name-wrap {
+    text-align: center;
+    color:#fff;
+    margin-top: 10px;
+}
+.profile-card .header .wrap .name-wrap i{
+    border-radius: 22px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    background-color: #2299ee;
+    font-size: 0.5rem;
+    padding: 2px;
+    border: 1px solid;
+    color: rgb(243,243,243);
+}
+.profile-card .article{
+    width: 100%;
+  /*  height: -webkit-calc(100% - 160px)!important;
+    height: -moz-calc(100% - 160px)!important;*/
+    height:190px;
+    overflow-y: auto;
+    overflow-x: hidden;
+/*    margin-bottom: 50px;*/
+   /* -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;*/
+}
+.profile-card .article .detail-box{
+    margin: 15px 5px 0 25px;
+}
+.profile-card .article .box-item{
+    position: relative;
+    margin-top: 13px;
+    line-height: 20px;
+    height: 20px;
+}
+.profile-card .article .box-item .labeler{
+    float: left;
+    width: 24%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    margin-right: 2%;
+    text-align: left;
+    color: #aeaeb2;
+    padding: 0;
+    text-indent: 0;
+}
+.profile-card .article .box-item .cnt{
+    float: left;
+    max-width: 78%;
+    word-break: break-all;
+    overflow: hidden;
+}
+.profile-card .article .box-item .cnt select{
+    width: 100%;
+}
+.profile-card .footer{
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:#f5f5f5;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    color:#2299ee;
+    font-size: 16px;
+}
+.profile-card .footer i{
+    margin-right: 10px;
+}
+.profile-card ul.box{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.profile-card ul.box li{
+    display: flex;
+    flex: 1 0 60px;
+    margin:25px 0 0 0;
+    background-color:#efefef;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-card ul.box li div{
+    display: flex;
+
+}
+.profile-card ul.box li div span{
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+/*ѡ����ҵ*/
+.companySelect header,.memberSelect header{
+    font-size: 16px;
+    color: #222222;
+    text-align: center;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+    border-bottom: 1px solid #dddddd;
+}
+.profile-card  .icon-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+
+}
+.companySelect article{
+    color: #222222;
+}
+.companySelect article ul{
+    width: 220px;
+    margin:0 auto;
+    margin-bottom: 50px;
+}
+.companySelect article ul li{
+    width: 100%;
+    line-height: 35px;
+    position: relative;
+}
+.companySelect article ul li label{
+    width: 190px;
+    display: inline-block;
+    margin-left: 25px;
+}
+.companySelect article ul li>input{
+    position: absolute;
+    top: 8px;
+}
+.companySelect footer div,.memberSelect footer div{
+    color: #ffffff;
+    background-color: #2299ee;
+    width: 143px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.companySelect footer,.memberSelect footer{
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+.memberSelect{
+    width: 550px;
+    padding-bottom: 50px;
+}
+.customerService{
+    width: 550px;
+}
+.memberSelect .preview{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    position: relative;
+}
+.memberSelect .preview .red{
+    color:#fe0315;
+}
+.memberSelect .preview .redNotice{
+    position: absolute;
+    bottom: -35px;
+    right: 16px;
+}
+.memberSelect .preview div{
+    border-bottom:3px solid #fe0315;
+}
+.memberSelect .preview h2{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.memberSelect .preview h2 .red{
+    color:#fe0315;
+}
+.memberSelect .preview h5{
+    font-size:16px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.memberSelect article{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    flex-flow:row nowrap;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow:row wrap ;
+}
+.memberSelect article .inputPanel,.memberSelect article .treePanel{
+}
+.memberSelect article .inputPanel .title,.memberSelect article .treePanel .title{
+    padding: 5px 0;
+}
+.memberSelect article .inputPanel .title .select-user-count{
+    float: right;
+    color: #777;
+}
+.memberSelect article .inputPanel{
+    flex: 3 0 260px;
+    padding-right: 30px;
+}
+.memberSelect article .inputPanel .main{
+    height: 310px;
+    border: 1px solid #dddddd;
+}
+.memberSelect article .treePanel{
+    flex: 2 0 200px;
+    padding-left: 10px;
+    width: 200px;
+}
+.memberSelect article .treePanel .main{
+    height: 310px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #dddddd;
+    word-break: break-all;
+}
+.memberSelect article .treePanel .main .checkAll label{
+    pointer-events: none;
+}
+.memberSelect article .treePanel .main .checkAll input{
+    pointer-events: none;
+}
+.memberSelect article .treePanel .breadcrumb{
+    padding: 9px 7px 9px 5px;
+}
+.memberSelect article .treePanel .breadcrumb>a{
+    text-decoration: none;
+    color: #38adff;
+    word-break: break-all;
+    display: inline;
+    position: relative;
+}
+.memberSelect article .treePanel .breadcrumb>a:after{
+    content: " >";
+    pointer-events: none;
+}
+.memberSelect article .treePanel .breadcrumb>a:nth-last-child(2):after,.memberSelect article .treePanel .breadcrumb>a:nth-last-child(1){
+    color: #979798;
+    pointer-events: none;
+}
+.memberSelect article .treePanel .breadcrumb>a:nth-last-child(1):after {
+    content: "" !important;
+}
+.memberSelect article .treePanel .main .checkAll input{
+    position: relative;
+    top: 1px;
+}
+.memberSelect article .treePanel .main .departmentGroup {
+    width: 218px;
+}
+.memberSelect article .treePanel .main li.department{
+    padding: 5px 43px 0 0;
+    border-bottom: 1px solid #dddddd;
+    text-indent: 5px;
+    cursor: pointer;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 175px;
+    position: relative;
+    font-size: 12px;
+    height: 22px;
+}
+.memberSelect article .treePanel .main li.department span{
+    position: relative;
+    color: #a2a2a2;
+}
+.memberSelect article .treePanel .main li.department span.count{
+    position: absolute;
+    right: 20px;
+    color: #a2a2a2;
+}
+.memberSelect article .treePanel .main li.member{
+    color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.memberSelect article .treePanel .main li.member span{
+   /* display: flex;*/
+    margin-left: 5px;
+}
+.memberSelect article .treePanel .main li.member .checkbox{
+
+}
+.memberSelect article .treePanel .main li.member span.avatar{
+    flex: 0 0 38px;
+    justify-content: center;
+}
+.memberSelect article .treePanel .main li.member.checked:after{
+    content:"";
+    background-color: #000;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+.memberSelect article .treePanel .main li.member.checked:before{
+    content: "";
+    width: 20px;
+    height: 10px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    z-index: 2;
+    transform: rotate(-45deg)
+}
+.memberSelect article .treePanel .main li.member .name{
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    overflow: hidden;
+}
+.memberSelect article .treePanel .main li.member .name span:last-child{
+    color:#7d7d7e;
+}
+.select2-container{
+    width: 100%!important;
+}
+.memberSelect article .l1{
+    width: 100%;
+    justify-content: space-between;
+}
+.memberSelect article .l1,.memberSelect article .l2{
+    display: flex;
+    align-items: center;
+}
+.memberSelect article .l2{
+    margin-bottom: 10px;
+}
+.memberSelect article .time{
+    display: flex;
+    height: 24px;
+}
+.memberSelect article .time label{
+    line-height: 24px;
+}
+.memberSelect article .time input{
+    width: 184px;
+    border: 1px solid #ccc;
+}
+.memberSelect article .l1 label,.memberSelect article .l2 label{
+    flex: 0 0 70px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+.memberSelect article .l1 input{
+    width: 175px;
+    height: 28px;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    display: flex;
+    flex:  0 0 175px;
+    margin-right: 10px;
+    text-indent: 5px;
+}
+.memberSelect article .l1 .btn{
+    width: 78px;
+    height: 28px;
+    display: flex;
+    border-radius: 3px;
+    background-color: #2197ea;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+.memberSelect article .l2>div{
+    display: flex;
+    justify-content: center;
+    align-items: center!important;
+}
+.memberSelect article .l2>div>input{
+    flex: 0 0 auto;
+    margin: 0;
+}
+.memberSelect article .l2 span{
+    display: flex;
+    height: 14px;
+    align-items: center;
+    cursor: pointer;
+}
+.memberSelect article .l2 .checkbox{
+    background: url("../img/app_spring.png") no-repeat;
+    background-position: -74px -85px;
+    flex: 0 0 14px;
+    width: 16px;
+    margin-right: 5px;
+}
+.memberSelect article .l2 .checked{
+    background-position: -102px -85px;
+}
+.memberSelect article .l2 .text{
+    flex: 0 0 auto;
+    width: 74px;
+}
+.companyInfo{
+    width: 514px;
+}
+.companyInfo ul{
+
+}
+.companyInfo ul li{
+    height: 46px;
+    line-height: 46px;
+}
+.companyInfo ul li select{
+}
+.companyInfo ul li:first-child span:first-child{
+    margin-right: 3px;
+}
+.companyInfo ul li span:first-child{
+    width: 190px;
+    text-align: right;
+    color: #6b6b6b;
+    margin-right: 10px
+}
+.companyInfo ul li span{
+    display: inline-block;
+    color: #212121;
+}
+.main .companyChange{
+    position: relative;
+}
+.main .companyChange .companyName{
+    display: inline-block;
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    text-indent: 5px;
+    background-color: #f5f5f5;
+    border-bottom: #d7d7d7 1px solid;
+    position: relative;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    padding-right: 18px;
+}
+.main .companyChange .companyName:before{
+    position: absolute;
+    content: "";
+    top: 8px;
+    right: 20px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    line-height: 16px;
+    border-left: 2px solid #d1d1d1;
+    border-bottom: 2px solid #d1d1d1;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+.main .companyChange select{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.meetingOn .select2-selection__choice__remove{
+    pointer-events: none;
+}
+.select2-search__field{
+    width: 260px!important;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border:none!important;
+}
+.select2-container--default .select2-selection--multiple{
+    border:none!important;
+}
+.select2-dropdown{
+    border: 1px solid #ddd;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px;
+    text-align: left;
+}
+.select2-container--default .select2-selection--single {
+    background-color: #1181d3!important;
+    border: none!important;
+    border-radius: 4px;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #b2cce5!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #b2cce5 transparent transparent transparent!important;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff!important;
+    line-height: 28px;
+}
+.select2-container--default .select2-results > .select2-results__options{
+    max-height: 220px!important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] small {
+    color: #fff;
+}
+.select2-results__option {
+    padding: 6px 3px!important;
+}
+.select2-result-avatar{
+    float: left;
+    margin-right: 6px;
+}
+.select2-result-info{
+
+}
+.info-line1{
+
+}
+.info-line1 .select2-result-name{
+    display: inline-block;
+    max-width: 165px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.info-line1 small{
+    font-size: 12px;
+    color: #808081;
+    display: inline-block;
+    max-width: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-align: right;
+    float: right;
+    line-height: 18px;
+}
+.info-line2{
+    display: inline-block;
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.select2-result-company{
+
+}

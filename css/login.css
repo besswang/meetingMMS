@@ -1,0 +1,88 @@
+#login{
+    background: url("../images/bac.jpg") no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#login .wrapper{
+    width: 362px;
+    height: 407px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -181px;
+    margin-top:-204px;
+}
+#login .wrapper .title{
+    font-size: 60px;
+    color:#fff;
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height:80px;
+    line-height: 80px;
+    text-align: center;
+}
+#login .nav-tabs{
+    border:none;
+}
+#login .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    background-color:#f3fcf6;
+    color:#222222;
+    font-weight: 700;
+}
+#login .nav-tabs > li{
+    width: 50%;
+    height: 72px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #bfbfbf;
+    border-radius: 4px 4px 0 0;
+}
+#login .nav-tabs > li.active{
+    border-bottom: none;
+}
+#login .nav > li > a:hover, .nav > li > a:focus{
+    background-color:#f3fcf6;
+}
+#login .nav-tabs > li > a{
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 18px;
+}
+#login a:hover, a:focus {
+    color: #222222;
+}
+#login a{
+    color: #222222;
+}
+#login .tab-pane{
+    background-color:#f3fcf6;
+    width: 362px;
+    height: 334px;
+}
+#login .input-group-addon{
+    background-color: #fff;
+}
+#login .form-group input{
+    height:42px;
+}
+#login .mix{
+    padding: 40px 25px 0 25px!important;
+}
+
+#login .form-group {
+    margin-bottom: 20px;
+}
+#login .form-group{
+    padding: 0 25px;
+}
+#login .btn-primary{
+    width: 100%;
+    height: 44px;
+    background-color: #38a4f7;
+    border:none;
+}
