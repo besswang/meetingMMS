@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div class="con-left" id="con-left-height">
+	<h2 class="title1 bt">
+		会议记录
+		<a href="#" >
+			<span class="icon icon-plus-sign themeC" data-toggle="modal" data-target="#myModal"></span>
+		</a>
+	</h2>
+	<!--<div id="spinner">-->
+		<!--正在加载-->
+	<!--</div>-->
+
+	<div  style="overflow:scroll;" id="meetscroll">
+	<section class="meeting-record" id="meeting-record" style="height:900px;"><!-- style="height:900px;"-->
+		<div class="empty" style="display:none;">
+			<span class="glyphicon glyphicon-comment f66"></span>
+			<p>
+				暂无会话
+			</p>
+		</div>
+		<ul class="meeting has-meeting-record">
+			<!--&lt;!&ndash;点击会议记录，给li添加active&ndash;&gt;-->
+			<!--<li>-->
+				<!--<div class="three-icon">-->
+					<!--<span class="small-icon">立娟</span>-->
+					<!--<span class="small-icon" style="float:left;margin-right:6px;">小强</span>-->
+					<!--<span class="small-icon" style="float:left;">灿烂</span>-->
+				<!--</div>-->
+				<!--<div class="right-cont">-->
+					<!--<p>-->
+						<!--<span class="content">每周例会劳动纠纷的立法局的俄反饥饿反饥饿哦分</span>-->
+						<!--<span class="time">今天</span>-->
+						<!--<time>16:30</time>-->
+					<!--</p>-->
+				<!--</div>-->
+			<!--</li>-->
+			<!--<li>-->
+				<!--<div class="three-icon">-->
+					<!--<span class="small-icon" style="display:none;"></span>&lt;!&ndash;背景图&ndash;&gt;-->
+					<!--<span class="small-icon" style="display:none;"></span>&lt;!&ndash;背景图&ndash;&gt;-->
+					<!--<span class="small-icon" style="display:none;"></span>&lt;!&ndash;背景图&ndash;&gt;-->
+					<!--<span class="small-icon">立娟</span>-->
+					<!--<span class="small-icon" style="float:left;margin-right:6px;">小强</span>-->
+					<!--<span class="small-icon" style="float:left;">灿烂</span>-->
+				<!--</div>-->
+				<!--<div class="right-cont">-->
+					<!--<p>-->
+						<!--<span class="content">每周例会</span>-->
+						<!--<span class="time">今天</span>-->
+						<!--<time>16:30</time>-->
+						<!--<a class="reservation" href="#">预约会议</a>-->
+					<!--</p>-->
+				<!--</div>-->
+			<!--</li>-->
+		</ul>
+	</section>
+	</div>
+</div>
+<div class="con-right" id="conRight">
+	<!--无成员-->
+	<div class="member emptyI" style="display:block;">
+		<div class="emptyI"></div>
+		<!--<div class="btnGroup">-->
+		<!--没有会议记录下的发起会议状态-->
+		<div class="btn default w280" data-toggle="modal" data-target="#myModal">发起电话会议</div>
+		<!--</div>-->
+	</div>
+	<!--有成员-->
+	<div class="member" style="display:none;">
+		<div class="host-icon" style="border: none; background-color: rgb(92, 107, 192);">立娟</div>
+		<div class="logWrap">
+			<ul class="log">
+				<!--<li>11-22 11:50王立娟正在连接中,了封疆大吏封疆大吏肌肤的，领导封疆大吏肌肤德拉吉拉肌肤的但封疆大吏封疆大吏分的飞机</li>-->
+				<!--<li>11-22 11:50王立娟正在连接中</li>-->
+				<!--<li>11-22 11:50王立娟正在连接中</li>-->
+				<!--<li>11-22 11:50王立娟正在连接中</li>-->
+				<!--<li>11-22 11:50王立娟正在连接中</li>-->
+			</ul>
+		</div>
+		<h2 class="host">主持人：王立娟</h2>
+		<div class="memberWrap">
+			<ul class="member-grounp">
+				<!--<li data-id="" data-memberphone="18668407878">-->
+					<!--<span class="m-icon" style="background-color: rgb(246, 94, 141);">永杰</span>-->
+					<!--<p class="name">徐永杰</p>-->
+				<!--</li>-->
+				<!--添加人员弹窗-->
+				<!--<li class="addBtn">-->
+					<!--<span class="addI"></span>-->
+				<!--</li>-->
+			</ul>
+			<div class="btnGroup">
+				<!--预约会议下的按钮状态-->
+				<div class="state1" >
+					<div class="btn default left state" id="atOnce">立即发启</div>
+					<div class="btn error right state" id="cancelMeeting">取消会议</div>
+				</div>
+				<!--在会议记录中重新发起状态-->
+				<div class="btn default w280" style="display:none;">重新发起</div>
+			</div>
+		</div>
+	</div>
+	<div class="btnGroup" style="display:none;">
+		<!--预约会议下的按钮状态-->
+		<div class="state1" style="display:none;">
+			<div class="btn default left state">立即发启</div>
+			<div class="btn error right state">取消会议</div>
+		</div>
+		<!--会议进行时的按钮状态-->
+		<div class="state2" style="display:none;">
+			<div class="btn close-meeting">
+				<span class="closeI"></span>
+			</div>
+			<div class="btn default left state">全员静音</div>
+			<div class="btn default right state">自动追呼</div>
+		</div>
+	</div>
+</div>
+<!--挂断，发言，移除-->
+<div class="b_main" id="meetingSet" style="display:none;">
+	<ul class="mem-operation">
+		<li><i class="hangupI" style=""></i>挂断</li>
+		<li><i class="speakI"></i>发言</li>
+		<li><i class="removeI"></i>移除</li>
+	</ul>
+	<div class="out">
+		<div class="dashed"></div>
+	</div>
+</div>
+<!--发起电话会议弹窗-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog"><!--半透明遮罩-->
+		<div class="modal-content m550">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<header>发起电话会议</header>
+				<header style="display: none;">短信群发</header>
+				<header style="display: none;">公告</header>
+				<header style="display: none;">添加联系人</header>
+			</div>
+			<div class="modal-body modal-member">
+				<article>
+					<div class="inputPanel">
+						<p class="title">
+							添加成员:
+							<span class="select-user-count">已选:0/500人</span>
+						</p>
+						<div class="main">
+							<div class="search-member" id="users">
+								<!--选定的人员-->
+								<input class="select2-search-field search" type="text" value="" id="member-phone" placeholder="搜索名字、拼音、手机号...">
+								<!--搜索的人员-->
+								<!--<ul class="select1-search-choice" id="search-member-list"></ul>-->
+								<!--<div id="users">-->
+									<!--<input class="search" placeholder="Search" />-->
+									<!--<button class="sort" data-sort="name">-->
+										<!--Sort by name-->
+									<!--</button>-->
+									<ul class="select1-search-choice list" id="search-member-list">
+										<!--<li data-id="1">-->
+											<!--<a href="https://twitter.com/javve" class="link name">Jonny Stromberg</a>-->
+											<!--<p class="born timestamp" data-timestamp="12345">1986</p>-->
+											<!--<img class="image" src="luke.jpeg">-->
+										<!--</li>-->
+										<!--<li data-id="2">-->
+											<!--<a href="https://twitter.com/arnklint" class="link name">Jonas Arnklint</a>-->
+											<!--<p class="born timestamp" data-timestamp="23456">1985</p>-->
+											<!--<img class="image" src="darth.jpeg">-->
+										<!--</li>-->
+										<!--<li data-id="3">-->
+											<!--<a href="https://twitter.com/martinaelm" class="link name">Martina Elm</a>-->
+											<!--<p class="born timestamp" data-timestamp="34567">1986</p>-->
+											<!--<img class="image" src="rey.jpeg">-->
+										<!--</li>-->
+										<!--<li data-id="4">-->
+											<!--<a href="https://twitter.com/GLindqvist" class="link name">Gustaf Lindqvist</a>-->
+											<!--<p class="born timestamp" data-timestamp="45678">1983</p>-->
+											<!--<img class="image" src="boba.jpeg">-->
+										<!--</li>-->
+									</ul>
+									<!--<ul class="pagination"></ul>-->
+
+								<!--</div>-->
+							</div>
+							<ul class="select2-choices" id="select2-choices">
+								<!--<li class="select2-search-choice">-->
+								<!--<span>王立娟</span>-->
+								<!--<a href="#" class="select2-search-choice-close"></a>-->
+								<!--</li>-->
+								<!--<li class="select2-search-field">-->
+								<!--<input type="text" value="" id="member-phone" placeholder="搜索名字、拼音、手机号...">-->
+								<!--</li>-->
+							</ul>
+							<!--<select class="js-example-tags form-control select2-hidden-accessible" multiple="" tabindex="-1" aria-hidden="true"></select>-->
+							<!--<span class="select2 select2-container select2-container&#45;&#45;default select2-container&#45;&#45;below" dir="ltr" style="width: 10px;">-->
+								<!--<span class="selection">-->
+									<!--<span class="select2-selection select2-selection&#45;&#45;multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1">-->
+										<!--<ul class="select2-selection__rendered">-->
+											<!--<li class="select2-search select2-search&#45;&#45;inline">-->
+												<!--<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="搜索名字、拼音、手机号...">-->
+											<!--</li>-->
+										<!--</ul>-->
+									<!--</span>-->
+								<!--</span>-->
+								<!--<span class="dropdown-wrapper" aria-hidden="true"></span>-->
+							<!--</span>-->
+						</div>
+					</div>
+					<!--右边-->
+					<div class="treePanel">
+						<div class="title">
+							选择联系人:
+						</div>
+						<div class="main" id="main">
+							<!--<div class="companyChange" style="display: none;">-->
+								<!--<span class="companyName">杭州简务网络科技有限公司</span>-->
+								<!--<select style="width: 200px;">-->
+									<!--<option value="杭州简务网络科技有限公司">杭州简务网络科技有限公司</option>-->
+								<!--</select>-->
+							<!--</div>-->
+							<div class="breadcrumb" id="breadcrumb">
+								<!--<a href="#"></a>-->
+								<!--<a href="#">&gt; 技术部</a>-->
+							</div>
+							<!--<div class="member-checkAll">-->
+								<!--<input type="checkbox" id="checkAll">-->
+								<!--<label for="checkAll">全选</label>-->
+							<!--</div>-->
+							<ul class="departmentGroup" id="departmentGroup">
+								<li class="department">
+									<p class="department-title">电话会议测试就放多了份的</p>
+									<span class="count">111人</span>
+								</li>
+								<li class="department">
+									<p class="department-title">业务部</p>
+									<span class="count">11人</span>
+								</li>
+								<li class="department">
+									<p class="department-title">技术部</p>
+									<span class="count">8人</span>
+								</li>
+								<li class="department">
+									<p class="department-title">后勤部</p>
+									<span class="count">3人</span>
+								</li>
+								<li class="department">
+									<p class="department-title">测试部</p>
+									<span class="count">5人</span>
+								</li>
+								<li class="member-li-sub department-li">
+									<div class="clearfix">
+										<label>
+											<input type="checkbox" class="member-radio">
+			                                <span class="sub-icon circle30" style="background:green;">甲壳虫</span>
+			                                <div class="sub-name-tel" data-expand="15057187176">甲壳虫</div>
+										</label>
+									</div>
+									<ul class="more-phone-ul">
+										<li class="more-phone-li">
+											<label>
+												<input type="radio" name="tel1" class="member-sub-radio" checked>
+												<small>15057187176</small>
+											</label>
+										</li>
+										<li class="more-phone-li">
+											<label>
+												<input type="radio" name="tel1" class="member-sub-radio">
+												<small>0571-8568182</small>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="member-li-sub department-li">
+									<div class="clearfix">
+										<label>
+											<input type="checkbox" class="member-radio">
+											<span class="sub-icon circle30" style="background:green;">小二</span>
+											<div class="sub-name-tel" data-expand="0571-8568182">小二</div>
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<form action="" class="form-inline add-num-form" role="form" id="add-num-form">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">临时号码:</label>
+						<div class="col-sm-5">
+							<input type="tel" name="add-tel" class="form-control" placeholder="请输入手机号或座机号">
+						</div>
+						<div class="col-sm-5">
+							<input type="text" name="add-name" class="form-control" placeholder="请输入姓名(可选)">
+						</div>
+					</div>
+					<span type="button" class="btn default btn-sm add" id="add-member">添加</span>
+				</form>
+				<form action="" class="form-inline add-num-form" role="form" style="margin-top:10px;">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">会议主题:</label>
+						<div class="col-sm-5">
+							<input type="text" name="meetTitle" class="form-control" placeholder="请输入主题">
+						</div>
+						<div class="col-sm-5" style="visibility: hidden;">
+							<input type="text" class="form-control" placeholder="请输入姓名(可选)">
+						</div>
+					</div>
+				</form>
+				<article class="meet-time">
+					<div class="radio">
+						<label>
+							<input type="radio" name="meeting" value="立即会议" checked> 立即会议
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="meeting" value="预约会议"> 预约会议
+						</label>
+					</div>
+				</article>
+				<form action="" class="form-inline add-num-form appointment" role="form" style="display:none;">
+					<div class="form-group" style="width:100%;">
+						<label class="col-sm-2 control-label">预约时间:</label>
+						<div class="input-group date col-sm-5" id="datatime" data-date-format="" data-link-field="dtp_input2">
+							<input class="form-control timevalue" size="16" type="text" value="" readonly>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar icon-th"></span></span>
+						</div>
+						<input type="hidden" id="dtp_input2" value="" /><br/>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn default" id="okBtn">确定</button>
+				<!--data-dismiss="modal"-->
+			</div>
+		</div>
+	</div>
+</div>
+<!--搜索结果-->
+<!--<span class="select2-container select2-container&#45;&#45;default select2-container&#45;&#45;open" style="position: absolute; top: 78.5px; left: 505.5px;">-->
+	<!--<span class="select2-dropdown select2-dropdown&#45;&#45;below" dir="ltr" style="width: 270px;">-->
+		<!--<span class="select2-results">-->
+			<!--<ul class="select2-results__options" role="tree" aria-multiselectable="true" id="select2-mz83-results" aria-expanded="true" aria-hidden="false">-->
+				<!--<li role="treeitem" aria-live="assertive" class="select2-results__option select2-results__message">暂无结果</li>-->
+			<!--</ul>-->
+		<!--</span>-->
+	<!--</span>-->
+<!--</span>-->
+</body>
+</html>
+
+
+
