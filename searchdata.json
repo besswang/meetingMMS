@@ -1,0 +1,24 @@
+{
+  "status": 200,
+  "code":"",
+  "message": "搜索成功",
+  "data": [
+    {
+      "id": 1352889,
+      "companyId": 2446,
+      "fixPhone": "18767173166",
+      "orderNo": 0,
+      "phoneName": "王建武",
+      "pinyin": "wangjianwu ",
+      "departId": 63435,
+      "departName":"技术部",
+      "status": 1,
+      "expand": "18967173111,13867173163,13767173129"
+    }
+  ],
+  "start": 1,
+  "limit": 10,
+  "total": 39,
+  "totalPages": 4,
+  "currentPage": 1
+}
