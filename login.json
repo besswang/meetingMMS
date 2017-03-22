@@ -1,0 +1,17 @@
+{
+  "status":"200",
+  "code":"",
+  "msg":"",
+  "data":{
+    "fixPhone":"18767173166",
+    "phoneName":"王立娟",
+    "accountType":0,
+    "status":1,
+    "createTime":1472007066000,
+    "expand":"18767173160,18767173161,18767173162",
+    "companyId":2446,
+    "companyName":"杭州简务网络科技有限公司",
+    "departId":63435,
+    "departName":"技术部"
+  }
+}
